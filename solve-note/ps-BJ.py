@@ -147,3 +147,40 @@ n = int(input())
 nums = list(map(int,input()))
 
 print(sum(nums))
+
+#! 1157 단어공부
+#* 내 코드
+import sys
+
+words = sys.stdin.readline()    
+words = words.strip("\n")       #* readline() 끝 "\n" 제거
+words = words.upper()
+words_set = set(words)          #* set() -> list() 이용해서 중복제거 해봄 ㅋㅋ
+words_set = list(words_set)
+result = []
+
+for i in range(len(words_set)):
+    result.append([words_set[i], words.count(words_set[i])])
+result.sort(key = lambda x : x[1], reverse=True)   #* key와 lambda 이용해서 sorting 해봄 ㅋㅋ 
+if len(result) != 1 and result[0][1] == result[1][1]:
+    print("?")
+else:
+    print(result[0][0])
+    
+#* xordud525 님 코드
+s,a=input().lower(),[]              
+for i in range(97,123):
+ a.append(s.count(chr(i)))
+print('?'if a.count(max(a))>1 else chr(a.index(max(a))+97).upper())
+
+#* duq1441 님 코드
+n = input()
+n = n.upper()
+alpa='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+result = []
+for i in alpa:
+  result.append(n.count(i))
+if result.count(max(result)) > 1:
+  print("?")
+else:
+  print(alpa[result.index(max(result))])
