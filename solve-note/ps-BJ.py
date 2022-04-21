@@ -184,3 +184,58 @@ if result.count(max(result)) > 1:
   print("?")
 else:
   print(alpa[result.index(max(result))])
+  
+  #! 10818 브3 - 최소, 최대 
+import sys
+n = int(input())
+nums = list(map(int,sys.stdin.readline().split()))
+# print(min(nums),max(nums))
+print(f'{min(nums)} {max(nums)}')
+  
+  #! 2920 브2 - 음계
+#   * 내 코드 
+#* 배운점 : if nums == nums.sort() 하면 nums 자체가 sort되버린다.
+# *         if nums == sorted(nums) 하면 sorted된 nums가 새로 생겨 비교해준다.
+import sys
+
+nums = list(map(int, sys.stdin.readline().split()))
+if nums == sorted(nums):
+    print("ascending")
+elif nums == sorted(nums,reverse=True):
+    print("descending")
+else :
+    print("mixed")
+    
+#! 브2 - 2675 - 문자열 반복
+# * 내코드
+import sys
+
+n = int(input())
+inputs = []
+for _ in range(n):
+    inputs.append(sys.stdin.readline().split())
+
+for i in range(len(inputs)):
+    r = int(inputs[i][0])
+    str = inputs[i][1]
+    for i in range(len(str)):
+       for _ in range(r):
+           print(str[i],end='')
+    print('')
+    
+#* 다른사람코드 
+#* rhino333
+t= int(input())
+for i in range(t):
+    a,b = input().split()
+    for x in b:
+        print(int(a)*x,end='')
+    print()
+# *	lambleon
+count=int(input())
+for i in range(count):
+    num, char=input().split()
+    text=''
+    for j in char:
+        text+=j*int(num)
+    print(text)
