@@ -2,10 +2,14 @@
 
 This Repository is for problem solve
 
-Roadmap is two-way
+Roadmap is Below
 
-1. Leetcode PS everyday
-2. Baekjoon PS everyday
+0. Baekjoon PS everyday
+1. Wednesday is PS day
+   1. Study algorithm Lecture
+   2. Leetcode PS on Wednesday
+
+---
 
 - [Python 문법](#python---)
   - [입력](#--)
@@ -25,10 +29,10 @@ Roadmap is two-way
 ### 입력
 
 ```py
-input()
-input().split()
-map(int, input().split())
-list(map(int, input().split())
+a = input()
+a, b = input().split()
+numa, numb = map(int, input().split())
+nums = list(map(int, input().split())
 ```
 
 ### 출력
@@ -51,6 +55,14 @@ True, False, Not True, and, or
 
 if all(60>x for x in a):    #(a에있는 x값이 전부 조건을 만족하면(for and))
 if any(60>x for x in a):    #(조건이 1번이라도 참이면 (for or))
+```
+
+### if 문
+
+```py
+python에서 Null Check는 None으로 한다.
+if foo is None:
+
 ```
 
 ### for 문
@@ -205,4 +217,15 @@ a = [1,2,3]
 print(list(map(plus_one, a)))
 print(list(map(lambda x : x + 1, a)))
 
+```
+
+## 알고리즘에서의 문법
+
+### 재귀함수 Recursion limit
+
+```py
+파이썬3의 recursion limit == 1000으로 셋팅되어 있다고 한다.
+아래 코드로 limit 변경이 가능하다.
+import sys
+sys.setrecursionlimit(2500)
 ```
