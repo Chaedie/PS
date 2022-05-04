@@ -229,3 +229,31 @@ print(list(map(lambda x : x + 1, a)))
 import sys
 sys.setrecursionlimit(2500)
 ```
+
+```py
+위 재귀함수 limit 설정으로 해결되는 문제도 있겠지만,
+나의 경우 제때 return 함수() 형태로 하지 않고,
+그냥 함수()로 함수를 실행해서 문제가 되었다.
+
++ 로 인풋 nums[] 에 target이 없는 경우에 "예외처리"를 요구하는 경우도 있는데,
+이를 무시하고, 값을 찾을때까지 재귀함수를 돌려서 뎁스가 limit에 닿은 경우도 있었다.
+```
+
+```py
+Leetcode binarysearch 기본 문제 풀이에 사용한 함수
+예외처리 부분이 없어서 limit에 닿았었다.
+def binarySearch(nums, target, lt, rt):
+    mid = (lt + rt) // 2
+
+    if lt >= rt:
+        if nums[lt] < target:
+            return lt+1
+        if nums[lt] > target:
+            return lt
+    if nums[mid] == target:
+        return mid
+    if nums[mid] < target:
+        return Solution.binarySearch(nums, target, mid + 1, rt)
+    if nums[mid] > target:
+        return Solution.binarySearch(nums, target, lt, mid - 1)
+```
