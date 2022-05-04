@@ -11,13 +11,22 @@ Roadmap is two-way
 
 ### 입력
 
+```py
 input()
 input().split()
 map(int, input().split())
 list(map(int, input().split())
+```
+
+### 출력
+
+```py
+print(f"#{i} YES")
+```
 
 ### 연산자
 
+```py
 a/b
 a%b
 a//b
@@ -25,16 +34,19 @@ a\*b
 a\*\*b : a의 b제곱
 
 True, False, Not True, and, or
-==, != , is, is not, += , (++ 안됨)
+==, != , is, is not, += , #(++ 안됨)
 
-if all(60>x for x in a): (a에있는 x값이 전부 조건을 만족하면(for and))
-if any(60>x for x in a): (조건이 1번이라도 참이면 (for or))
+if all(60>x for x in a):    #(a에있는 x값이 전부 조건을 만족하면(for and))
+if any(60>x for x in a):    #(조건이 1번이라도 참이면 (for or))
+```
 
 ### for 문
 
+```py
 a = range(1,5) -> [1,2,3,4,5]
 for i in range(10): print(i)
 for i in range(10, 0, -1): print(i)
+```
 
 ```py
 for i in range(3):
@@ -47,6 +59,7 @@ else:                   # For문이 break 를 만나지 못하면 else가 실행
 
 ### 문자
 
+```py
 String
 str.find(i)
 str.upper()
@@ -57,9 +70,11 @@ str.len()
 str[:::]
 ord(char) : 아스키코드 출력
 chr(ord(char)) : 아스키에 대응하는 char을 출력
+```
 
 ### 리스트
 
+```py
 li = []
 li1 = [1,2,3]
 li2 = list(range(4,7))
@@ -95,18 +110,21 @@ for x in li:
 for x in enumerate(li): : x에 (index, value) tuple 로 대응
 for index, value in enumerate(li):
 
-- tuple과 list의 차이점 : 다 같은데, tuple은 값 변경이 안됨
+# tuple과 list의 차이점 : 다 같은데, tuple은 값 변경이 안됨
+```
 
 ### 2차원 리스트
 
-li = [0]\*3 : 1차원 리스트 0으로 초기화
-li = [[0]\*3] for \_ in range(3) : 2차원 리스트 0으로 3행 초기화
+```py
+li = [0]*3         #: 1차원 리스트 0으로 초기화
+li = [[0]*3]       #for \_ in range(3) : 2차원 리스트 0으로 3행 초기화
 
 for x in li: : 각 행 출력
 for y in li: : 각 행의 각 원소 출력
+```
 
-List - 기초, 시퀀스 연산 : https://andamiro25.tistory.com/90
-List - Extended Slices [::] https://blog.wonkyunglee.io/3
+- List - 기초, 시퀀스 연산 : https://andamiro25.tistory.com/90
+- List - Extended Slices [::] https://blog.wonkyunglee.io/3
 
 ### 함수
 
