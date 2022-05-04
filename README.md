@@ -7,6 +7,19 @@ Roadmap is two-way
 1. Leetcode PS everyday
 2. Baekjoon PS everyday
 
+- [Python 문법](#python---)
+  - [입력](#--)
+  - [출력](#--)
+  - [연산자](#---)
+  - [for 문](#for--)
+  - [문자](#--)
+  - [리스트](#---)
+  - [2차원 리스트](#2------)
+  - [함수](#--)
+  - [람다 함수(람다 표현식)](#-------------)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ## Python 문법
 
 ### 입력
