@@ -10,3 +10,9 @@ for i in range(len(alphabet)):
 
 for res in result:
     print(res,end=' ')
+    
+# 다른사람 코드 좋은거 들고옴
+string = input()
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+for i in alphabet:
+    print(string.find(i), end = ' ')
