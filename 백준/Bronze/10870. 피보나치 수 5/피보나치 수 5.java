@@ -5,17 +5,13 @@ import java.io.*;
 public class Main {
 
     public static int fibo (int n){
-        int answer = 0;
-        while (n > 1) {
-            return fibo(n - 1) + fibo (n - 2);
-        }
         if (n == 1) {
-            answer = 1;
+            return 1;
         }
         if (n == 0) {
-            answer = 0;
+            return 0;
         }
-        return answer;
+        return  fibo(n - 1) + fibo (n - 2);
     }
 
 
