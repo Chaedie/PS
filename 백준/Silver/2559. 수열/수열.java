@@ -5,12 +5,15 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         //* 인풋
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int k = sc.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] strs1 = br.readLine().split(" ");
+        int n = Integer.parseInt(strs1[0]);
+        int k = Integer.parseInt(strs1[1]);
+        
         int[] nums = new int[n];
+        String[] strs2 = br.readLine().split(" ");
         for (int i = 0; i < n; i++) {
-            nums[i] = sc.nextInt();
+            nums[i] = Integer.parseInt(strs2[i]);
         }
 
         //* 시스템
@@ -29,5 +32,6 @@ public class Main {
 
         //* 아웃풋
         System.out.println(max);
+        br.close();
     }
 }
